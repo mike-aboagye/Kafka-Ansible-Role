@@ -1,0 +1,21 @@
+- name: update packages on the server
+  apt:
+    update_cache: yes
+  tags:
+  -  pkgs
+
+
+- name: check for kafka archived file
+  stat:
+    path: "{{ kafka_installed_path }}/{{ kafka_version }}"
+    register: kafka
+
+- name: print debug message for kafka archived file
+  debug:
+    msg: "kafka file exist"
+  when: kafka.stat.exists
+
+- name: print debug message for kafka archived file
+  debug:
+    msg: "kafka file does not exist"
+  when: not kafka.stat.exists
