@@ -12,5 +12,5 @@
 
 
   - name: download kafka archived file using wget utility
-    command: /usr/bin/wget "{{ download_kafka_version }}"
+    command: /usr/bin/wget "https://downloads.apache.org/kafka/{{ download_kafka_version }}"
 
