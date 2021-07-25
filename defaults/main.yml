@@ -1,3 +1,9 @@
 kafka_installed_path: /Downloads
 
 kafka_archived_version: kafka-2.8.0-src.tgz
+
+jdk_version: default-jdk 
+
+download_kafka_version: https://downloads.apache.org/kafka/2.6.2/kafka_2.13-2.6.2.tgz
+
+
