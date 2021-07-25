@@ -1,0 +1,16 @@
+
+  - name: update packages on the server
+    apt:
+      update_cache: yes
+    
+
+
+  - name: install java developement kit
+    apt:
+      name: "{{ jdk_version }}"
+      state: present
+
+
+  - name: download kafka archived file using wget utility
+    command: /usr/bin/wget "{{ download_kafka_version }}"
+
